@@ -20,9 +20,9 @@ resource "azurerm_network_security_group" "az_security_group" {
   }
 
   tags = {
-    Region      = "data.azurerm_resource_group.azure_rg.location"
-    Team        = "var.team_tag"
-    Environment = "var.env"
-    Creator     = "var.creator"
+    Region      = data.azurerm_resource_group.azure_rg.location
+    Team        = var.team_tag
+    Environment = var.env
+    Creator     = var.creator
   }
 }
